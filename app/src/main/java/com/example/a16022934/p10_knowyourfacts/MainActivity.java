@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         al.add(new Frag1());
         al.add(new Frag2());
         al.add(new Frag3());
+        al.add(new Frag4());
 
         adapter = new MyFragmentPagerAdapter(fm, al);
 
@@ -79,7 +80,6 @@ public class MainActivity extends AppCompatActivity {
         super.onPause();
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
         SharedPreferences.Editor prefEdit = prefs.edit();
-
         int page = vPager.getCurrentItem();
         prefEdit.putInt("page",page);
         prefEdit.apply();
